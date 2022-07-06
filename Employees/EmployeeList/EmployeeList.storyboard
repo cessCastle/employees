@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZOo-eX-iOT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Employee List-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="EmployeeListViewController" customModule="Employees" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MOJ-8A-AB8">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MOJ-8A-AB8" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="1Q2-SO-uTh"/>
+                            <constraint firstItem="MOJ-8A-AB8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="36E-k0-eIs"/>
+                            <constraint firstItem="MOJ-8A-AB8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9oK-Yn-evB"/>
+                            <constraint firstAttribute="bottom" secondItem="MOJ-8A-AB8" secondAttribute="bottom" id="NMn-Z0-x3g"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="DUd-8w-PWa">
+                        <imageReference key="image" image="list.dash" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color name="blueDark"/>
+                                <color name="blueDark"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Employee List" largeTitleDisplayMode="always" id="fP2-2p-1xM"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="MOJ-8A-AB8" id="dqH-MG-gS5"/>
+                        <segue destination="2Ld-Hf-d3G" kind="show" id="tuq-qE-MGr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="135.9375"/>
+        </scene>
+        <!--Employee Detail View Controller-->
+        <scene sceneID="dg3-Io-1c8">
+            <objects>
+                <viewController storyboardIdentifier="employeeDetail" id="2Ld-Hf-d3G" customClass="EmployeeDetailViewController" customModule="Employees" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Kn-J4-aWg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="CY6-GT-qS8">
+                                <rect key="frame" x="10" y="160" width="394" height="171"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmm-aQ-cLt">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LLL-LB-rWb">
+                                        <rect key="frame" x="0.0" y="79" width="394" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UL2-BD-GYI">
+                                                <rect key="frame" x="0.0" y="0.0" width="194.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hel-CA-tHa">
+                                                <rect key="frame" x="204.5" y="0.0" width="189.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arE-KZ-mGd">
+                                        <rect key="frame" x="0.0" y="149.5" width="394" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="arE-KZ-mGd" firstAttribute="leading" secondItem="CY6-GT-qS8" secondAttribute="leading" id="EMS-iA-Abd"/>
+                                    <constraint firstAttribute="trailing" secondItem="arE-KZ-mGd" secondAttribute="trailing" id="NeM-1w-EUf"/>
+                                    <constraint firstItem="LLL-LB-rWb" firstAttribute="centerX" secondItem="CY6-GT-qS8" secondAttribute="centerX" id="cpa-oa-huM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fmm-aQ-cLt" secondAttribute="trailing" id="f5j-vn-Mh1"/>
+                                    <constraint firstItem="Fmm-aQ-cLt" firstAttribute="leading" secondItem="CY6-GT-qS8" secondAttribute="leading" id="uDd-Gg-3H9"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tax-z1-f3v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tax-z1-f3v" firstAttribute="trailing" secondItem="CY6-GT-qS8" secondAttribute="trailing" constant="10" id="JOc-ZF-pIA"/>
+                            <constraint firstItem="CY6-GT-qS8" firstAttribute="top" secondItem="Tax-z1-f3v" secondAttribute="top" constant="20" id="Nbs-LS-h9t"/>
+                            <constraint firstItem="CY6-GT-qS8" firstAttribute="leading" secondItem="4Kn-J4-aWg" secondAttribute="leading" constant="10" id="vLc-mX-pgk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="employeeAgeLabel" destination="hel-CA-tHa" id="Yx8-Ix-BfM"/>
+                        <outlet property="employeeIdLabel" destination="Fmm-aQ-cLt" id="ew8-eM-MR2"/>
+                        <outlet property="employeeNameLabel" destination="UL2-BD-GYI" id="ZY7-T7-3CW"/>
+                        <outlet property="employeeSalaryLabel" destination="arE-KZ-mGd" id="8go-Jm-9U5"/>
+                        <outlet property="mainStackView" destination="CY6-GT-qS8" id="KuH-C0-BaV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fqs-Fe-wwr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718.840579710145" y="144.64285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eWI-3g-1b2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZOo-eX-iOT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Cts-hy-agz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="YDA-Y7-Lyi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okN-yz-tRl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.4492753623188408" y="135.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <namedColor name="blueDark">
+            <color red="0.14509803921568629" green="0.15686274509803921" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
